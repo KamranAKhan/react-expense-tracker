@@ -43,4 +43,4 @@ jobs:
       
       
     - name: Deploying using Surge
-      run: surge ./build bootcamp-test-react.surge.sh --token ${{ secrets.SURGE_TOKEN }} 
+      run: surge ./build expense-tracker-reactjs.surge.sh --token ${{ secrets.SURGE_TOKEN }} 
