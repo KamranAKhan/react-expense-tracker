@@ -1,38 +1,226 @@
-.App {
+body{
+  background-color: #e8e8e8;
+}
+h2{
+  margin: 0;
+}
+.main-heading h2{
   text-align: center;
+  padding: 15px 0;
+  line-height: 0.9em;
+  font-size: 28px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.expense-tracker{
+  width: 400px;
+  height: 600px;
+  margin: 0 auto;  
+  margin-top: 50px;    
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Header Component Css Starts */
+
+header{
+  margin-bottom: 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Header Component Css Ends */
+
+/* Balance Component Css Starts */
+
+.balance{
+  float: left;
+  width: 100%;
+  margin-bottom:20px;
 }
 
-.App-link {
-  color: #61dafb;
+.balance > h1{
+  line-height: 0.8em;  
+  margin-top:0px;
+  margin-bottom:25px;  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.balance span{
+  font-size: 16px;;
+  font-weight: 600;
 }
+
+.income-expense{  
+  float: left;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 2px 3px #dedede;
+}
+
+.income-expense p{
+  font-weight: 700;
+}
+
+.income-expense span{
+  font-size: 26px;
+}
+
+.income, .expense{
+  width: 50%;
+  float: left;
+  text-align: center;
+  font-weight: 600;  
+  font-size: 15px;
+  padding: 7px;
+  box-sizing: border-box;
+}
+
+.income span{
+  color: #54af5b !important;
+}
+
+.expense span{
+  color: #e42020 !important;
+}
+
+/* Balance Component Css Ends */
+
+/* Transaction List Component Css Starts */
+
+.transaction-history{
+  float: left;
+  width: 100%;  
+}
+
+.transaction-history h3{ 
+  margin-bottom: 10px;
+}
+
+.transaction-list{
+  float: left;
+  width: 100%;
+}
+
+.transaction-list ul{
+  float: left;
+  width: 100%;
+  padding: 0;
+}
+
+.transaction-list ul li{
+  float: left;
+  width: 100%;
+  background-color: #ffffff;
+  list-style-type: none;
+  margin-bottom: 10px;
+  padding: 10px;
+  box-sizing: border-box;  
+  position: relative;
+}
+
+.transaction-list ul li.transaction-income{
+  border-right: 5px solid #54af5b;
+}
+
+.transaction-list ul li.transaction-expense{
+  border-right: 5px solid #e42020;
+}
+
+.transaction-list ul li span{
+  float: right;  
+}
+
+.transaction-list button.delete-transaction{  
+  /* visibility: hidden;
+  cursor: pointer;
+  background-color: #e42020;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-0%,-50%);  
+  transition: left .3s;
+  z-index: -1; */
+  cursor: pointer;
+  background-color: #e74c3c;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%,-50%);
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+
+
+.transaction-list ul li:hover .delete-transaction{
+  opacity: 1;
+  /* visibility: visible;
+  left: -20px; */
+}
+
+
+/* Transaction List Component Css Ends */
+
+/* NewTransaction List Component Css Starts */
+
+.new-transaction, .transaction-fields, .transaction-fields form, .input-divider{
+  float: left;
+  width: 100%;
+}
+
+.new-transaction h3{
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.input-divider{  
+  margin-bottom: 10px;;
+}
+
+.input-divider .transaction-type{  
+  float: left;
+}
+
+.input-divider label{
+  font-size: 16px;
+  padding-bottom: 5px;  
+  display: inline-block;
+}
+
+.input-divider input[type="text"], .input-divider input[type="number"]{
+  display: block;
+    font-size: 14px;
+    padding: 8px;
+    width: 94%;
+    color: #555555;
+    font-weight: 500;
+    box-shadow: 0px 2px 2px 3px #dedede;
+    border: 1px solid #000;
+}
+.input-divider button{
+  float: left;
+  width: 100%;
+  /* background-color: #6b6bca; */
+  background-color: #0075ff;
+  color: #ffffff;
+  padding: 10px 0;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+
+}
+
+.input-divider input[type="radio"]{
+  margin: 5px;
+}
+
+/* NewTransaction List Component Css Ends */
+
+
+
+
