@@ -6,13 +6,17 @@ import {TransactionContext} from './TransactionContext';
 
 const NewTransaction = () => {
 
-    const { transactions, addNewTransaction } = useContext(TransactionContext);
+    const { addNewTransaction } = useContext(TransactionContext);
     let [newDesc, setNewDesc] = useState("");
     let [newAmount, setNewAmount] = useState(0);
     let [isIncomeType, setIncomeType] = useState(true);        
     
     const submitNewTransaction = (event) => {
-        event.preventDefault();        
+        event.preventDefault();
+        if(newAmount < 1) {
+            alert("Please insert amount greater than 0");        
+            return;
+        }
         addNewTransaction({            
             desc: newDesc,
             amount: Number(newAmount),
@@ -23,11 +27,7 @@ const NewTransaction = () => {
         setNewAmount(0);
         setIncomeType(true);
 
-    }
-   
-    const updateTransactionType = () => {
-        isIncomeType = !isIncomeType;                        
-    }
+    }       
 
     return (
         <div className="new-transaction">

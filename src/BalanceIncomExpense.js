@@ -6,7 +6,7 @@ import { TransactionContext } from './TransactionContext';
 
 const BalanceIncomeExpense = () => {
 
-    const { transactions, addTransaction } = useContext(TransactionContext);
+    const { transactions } = useContext(TransactionContext);
 
     const getIncomeTotal = () => {
         let income = 0;
