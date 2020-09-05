@@ -1,4 +1,5 @@
 const TransactionReducer = (state, action) => {
+    console.log(state);
     switch (action.type) {
         case 'NEW_TRANSACTION':
             return [action.payload, ...state];        
